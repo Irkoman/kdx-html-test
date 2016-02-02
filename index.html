@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Captain Quack</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,300,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a class="logo" href="index.html">
+          
+        </a>
+        <label class="toggler toggler--open" for="nav-btn"></label>
+      </div>
+
+      <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
+
+      <label class="toggler toggler--close" for="nav-btn">&#215;</label>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="#">Автомобили</a>
+            <ul class="sub-menu">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Подбор авто</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Автомобили с&nbsp;пробегом</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Карта цен</a></li>
+            </ul>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Акции</a>
+            <ul class="sub-menu">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">&laquo;Потрись Лумумбой&raquo;</a></li>
+            </ul>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Услуги</a>
+            <ul class="sub-menu">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Продаём авто</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">И&nbsp;какие-то куртки</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Оттопыриваем чакры</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="filter">
+      <form action="/echo" method="post">
+        <select name="brand">
+          <option value="apo">Apo</option>
+          <option value="arbor">Arbor</option>
+          <option value="burton" selected>Burton</option>
+          <option value="capita">Capita</option>
+          <option value="dc">DC</option>
+          <option value="forum">Forum</option>
+          <option value="gnu">GNU</option>
+          <option value="joint">Joint</option>
+          <option value="jones">Jones</option>
+          <option value="lib">LIB</option>
+          <option value="lobster">Lobster</option>
+          <option value="never summer">Never Summer</option>
+          <option value="slash">Slash</option>
+          <option value="yes">Yes</option>
+        </select>
+      </form>
+    </section>
+
+    <section class="slider">
+      <div class="slide slide--burton">
+        <div class="slide__title">Burton Зима 2014</div>
+        <div class="marker">
+          <div class="marker__info">
+            <p class="marker__description">Куртка<br>Burton Poacher Jacket<br>6 430 руб.</p>
+            <a class="marker__link" href="#">Посмотреть в&nbsp;каталоге</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide slide--cheers">
+        <div class="slide__title">Cheers!</div>
+      </div>
+
+      <a class="slider__control slider__control--left" href="">
+        <svg width="21.706" height="41.719" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+          <path class="control-color" fill="#bec2c7" d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261 c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248 c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+        </svg>
+      </a>
+      <a class="slider__control slider__control--right" href="">
+        <svg width="21.706" height="41.719" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+          <path class="control-color" fill="#bec2c7" d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012 c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248 c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+        </svg>
+      </a>
+    </section>
+
+    <section class="supply">
+      <h2>Автомобили в&nbsp;наличии</h2>
+      <table class="supply-table">
+        <tr>
+          <td class="supply-table__header">Название</td>
+          <td class="supply-table__header">Год</td>
+          <td class="supply-table__header">Цвет</td>
+          <td class="supply-table__header">Статус</td>
+          <td class="supply-table__header supply-table__header--price">Цена</td>
+          <td class="supply-table__header supply-table__header--empty"></td>
+        </tr>
+
+        <tr>
+          <td class="supply-table__name">1.6&nbsp;MT Ambiente 85&nbsp;л.с. МКПП<span class="supply-table__extra">+ доп. опция &laquo;Радио-навигационная система Amundasen 2DIN, CD, MP3&raquo;</span></td>
+          <td class="supply-table__year">2012</td>
+          <td class="supply-table__color"></td>
+          <td class="supply-table__status">Ожидается</td>
+          <td class="supply-table__price">1&nbsp;689&nbsp;000&nbsp;руб.</td>
+          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        </tr>
+
+        <tr>
+          <td class="supply-table__name">1.6&nbsp;MT Ambiente Plus 105 л.с. МКПП</td>
+          <td class="supply-table__year">2012</td>
+          <td class="supply-table__color"></td>
+          <td class="supply-table__status">Ожидается</td>
+          <td class="supply-table__price">1&nbsp;189&nbsp;900&nbsp;руб.</td>
+          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        </tr>
+
+        <tr>
+          <td class="supply-table__name">1.6&nbsp;MT Trend 105 л.с. МКПП</td>
+          <td class="supply-table__year">2012</td>
+          <td class="supply-table__color"></td>
+          <td class="supply-table__status">В&nbsp;наличии</td>
+          <td class="supply-table__price">1&nbsp;459&nbsp;000&nbsp;руб.</td>
+          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        </tr>
+
+        <tr>
+          <td class="supply-table__name">1.6 PowerShift Trend Sport 105 л.с. АКПП</td>
+          <td class="supply-table__year">2012</td>
+          <td class="supply-table__color"></td>
+          <td class="supply-table__status">Ожидается</td>
+          <td class="supply-table__price">1&nbsp;459&nbsp;000&nbsp;руб.</td>
+          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        </tr>
+
+        <tr>
+          <td class="supply-table__name">2.0&nbsp;MT Trend Sport 150 л.с. МКПП</td>
+          <td class="supply-table__year">2012</td>
+          <td class="supply-table__color"></td>
+          <td class="supply-table__status">Ожидается</td>
+          <td class="supply-table__price">786&nbsp;000&nbsp;руб.</td>
+          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        </tr>
+
+        <tr>
+          <td class="supply-table__name">2.0 PowerShift Trend Sport 150 л.с. АКПП<span class="supply-table__extra">+ доп. опция &laquo;Радио-навигационная система Amundasen 2DIN, CD, MP3&raquo;</span></td>
+          <td class="supply-table__year">2013</td>
+          <td class="supply-table__color"></td>
+          <td class="supply-table__status">Нет в&nbsp;наличии</td>
+          <td class="supply-table__price">821&nbsp;000&nbsp;руб.</td>
+          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <footer class="main-footer main-footer">
+      <div class="container">
+        <section class="copyright">
+          <p class="copyright__text">© 2015 Captain Quack</p>
+          <p class="copyright__text">Десница тысячелетия и&nbsp;моллюск!</p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
