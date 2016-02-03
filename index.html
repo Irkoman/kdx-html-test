@@ -10,34 +10,33 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container clearfix">
         <a class="logo" href="index.html">
           
         </a>
-        <label class="toggler toggler--open" for="nav-btn"></label>
+        <label class="toggler toggler--open" for="nav-btn">&#215;</label>
       </div>
 
-      <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
-
-      <label class="toggler toggler--close" for="nav-btn">&#215;</label>
-      <nav class="menu">
-        <ul class="menu__list">
+      <nav class="navigation">
+        <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
+        <ul class="menu">
           <li class="menu__item">
-            <a class="menu__link menu__link--active" href="#">Автомобили</a>
+            <label class="menu__toggler" href="#">Автомобили</label>
+
             <ul class="sub-menu">
               <li class="sub-menu__item"><a class="sub-menu__link" href="#">Подбор авто</a></li>
               <li class="sub-menu__item"><a class="sub-menu__link" href="#">Автомобили с&nbsp;пробегом</a></li>
               <li class="sub-menu__item"><a class="sub-menu__link" href="#">Карта цен</a></li>
             </ul>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Акции</a>
+          <li class="menu__item">
+            <label class="menu__link" href="#">Акции</label>
             <ul class="sub-menu">
               <li class="sub-menu__item"><a class="sub-menu__link" href="#">&laquo;Потрись Лумумбой&raquo;</a></li>
             </ul>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Услуги</a>
+          <li class="menu__item">
+            <label class="menu__link" href="#">Услуги</label>
             <ul class="sub-menu">
               <li class="sub-menu__item"><a class="sub-menu__link" href="#">Продаём авто</a></li>
               <li class="sub-menu__item"><a class="sub-menu__link" href="#">И&nbsp;какие-то куртки</a></li>
@@ -49,24 +48,27 @@
     </header>
 
     <section class="filter">
-      <form action="/echo" method="post">
-        <select name="brand">
-          <option value="apo">Apo</option>
-          <option value="arbor">Arbor</option>
-          <option value="burton" selected>Burton</option>
-          <option value="capita">Capita</option>
-          <option value="dc">DC</option>
-          <option value="forum">Forum</option>
-          <option value="gnu">GNU</option>
-          <option value="joint">Joint</option>
-          <option value="jones">Jones</option>
-          <option value="lib">LIB</option>
-          <option value="lobster">Lobster</option>
-          <option value="never summer">Never Summer</option>
-          <option value="slash">Slash</option>
-          <option value="yes">Yes</option>
-        </select>
-      </form>
+      <div class="container">
+        <h3 class="filter__title">Выберите бренд</h3>
+        <form action="/echo" method="post">
+          <select name="brand">
+            <option value="apo">Apo</option>
+            <option value="arbor">Arbor</option>
+            <option value="burton" selected>Burton</option>
+            <option value="capita">Capita</option>
+            <option value="dc">DC</option>
+            <option value="forum">Forum</option>
+            <option value="gnu">GNU</option>
+            <option value="joint">Joint</option>
+            <option value="jones">Jones</option>
+            <option value="lib">LIB</option>
+            <option value="lobster">Lobster</option>
+            <option value="never summer">Never Summer</option>
+            <option value="slash">Slash</option>
+            <option value="yes">Yes</option>
+          </select>
+        </form>
+      </div>
     </section>
 
     <section class="slider">
@@ -96,74 +98,74 @@
     </section>
 
     <section class="supply">
-      <h2>Автомобили в&nbsp;наличии</h2>
-      <table class="supply-table">
-        <tr>
-          <td class="supply-table__header">Название</td>
-          <td class="supply-table__header">Год</td>
-          <td class="supply-table__header">Цвет</td>
-          <td class="supply-table__header">Статус</td>
-          <td class="supply-table__header supply-table__header--price">Цена</td>
-          <td class="supply-table__header supply-table__header--empty"></td>
+      <h1 class="supply__title">Автомобили в&nbsp;наличии</h1>
+      <table class="table">
+        <tr class="table__row table__row--header">
+          <td class="table__cell table__cell--header">Название</td>
+          <td class="table__cell table__cell--header">Год</td>
+          <td class="table__cell table__cell--header">Цвет</td>
+          <td class="table__cell table__cell--header">Статус</td>
+          <td class="table__cell table__cell--header">Цена</td>
+          <td class="table__cell table__cell--empty"></td>
         </tr>
 
-        <tr>
-          <td class="supply-table__name">1.6&nbsp;MT Ambiente 85&nbsp;л.с. МКПП<span class="supply-table__extra">+ доп. опция &laquo;Радио-навигационная система Amundasen 2DIN, CD, MP3&raquo;</span></td>
-          <td class="supply-table__year">2012</td>
-          <td class="supply-table__color"></td>
-          <td class="supply-table__status">Ожидается</td>
-          <td class="supply-table__price">1&nbsp;689&nbsp;000&nbsp;руб.</td>
-          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        <tr class="table__row">
+          <td class="table__cell table__cell--name">1.6&nbsp;MT Ambiente 85&nbsp;л.с. МКПП<span class="table__extra">+ доп. опция &laquo;Радио-навигационная система Amundasen 2DIN, CD, MP3&raquo;</span></td>
+          <td class="table__cell table__cell--year">2012</td>
+          <td class="table__cell table__cell--color"></td>
+          <td class="table__cell table__cell--status">Ожидается</td>
+          <td class="table__cell table__cell--price">1&nbsp;689&nbsp;000&nbsp;руб.</td>
+          <td class="table__cell table__cell--query"><a class="table__button" href="#">Запрос</a></td>
         </tr>
 
-        <tr>
-          <td class="supply-table__name">1.6&nbsp;MT Ambiente Plus 105 л.с. МКПП</td>
-          <td class="supply-table__year">2012</td>
-          <td class="supply-table__color"></td>
-          <td class="supply-table__status">Ожидается</td>
-          <td class="supply-table__price">1&nbsp;189&nbsp;900&nbsp;руб.</td>
-          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        <tr class="table__row">
+          <td class="table__cell table__cell--name">1.6&nbsp;MT Ambiente Plus 105 л.с. МКПП</td>
+          <td class="table__cell table__cell--year">2012</td>
+          <td class="table__cell table__cell--color"></td>
+          <td class="table__cell table__cell--status">Ожидается</td>
+          <td class="table__cell table__cell--price">1&nbsp;189&nbsp;900&nbsp;руб.</td>
+          <td class="table__cell table__cell--query"><a class="table__button" href="#">Запрос</a></td>
         </tr>
 
-        <tr>
-          <td class="supply-table__name">1.6&nbsp;MT Trend 105 л.с. МКПП</td>
-          <td class="supply-table__year">2012</td>
-          <td class="supply-table__color"></td>
-          <td class="supply-table__status">В&nbsp;наличии</td>
-          <td class="supply-table__price">1&nbsp;459&nbsp;000&nbsp;руб.</td>
-          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        <tr class="table__row">
+          <td class="table__cell table__cell--name">1.6&nbsp;MT Trend 105 л.с. МКПП</td>
+          <td class="table__cell table__cell--year">2012</td>
+          <td class="table__cell table__cell--color"></td>
+          <td class="table__cell table__cell--status">В&nbsp;наличии</td>
+          <td class="table__cell table__cell--price">1&nbsp;459&nbsp;000&nbsp;руб.</td>
+          <td class="table__cell table__cell--query"><a class="table__button" href="#">Запрос</a></td>
         </tr>
 
-        <tr>
-          <td class="supply-table__name">1.6 PowerShift Trend Sport 105 л.с. АКПП</td>
-          <td class="supply-table__year">2012</td>
-          <td class="supply-table__color"></td>
-          <td class="supply-table__status">Ожидается</td>
-          <td class="supply-table__price">1&nbsp;459&nbsp;000&nbsp;руб.</td>
-          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        <tr class="table__row">
+          <td class="table__cell table__cell--name">1.6 PowerShift Trend Sport 105 л.с. АКПП</td>
+          <td class="table__cell table__cell--year">2012</td>
+          <td class="table__cell table__cell--color"></td>
+          <td class="table__cell table__cell--status">Ожидается</td>
+          <td class="table__cell table__cell--price">1&nbsp;459&nbsp;000&nbsp;руб.</td>
+          <td class="table__cell table__cell--query"><a class="table__button" href="#">Запрос</a></td>
         </tr>
 
-        <tr>
-          <td class="supply-table__name">2.0&nbsp;MT Trend Sport 150 л.с. МКПП</td>
-          <td class="supply-table__year">2012</td>
-          <td class="supply-table__color"></td>
-          <td class="supply-table__status">Ожидается</td>
-          <td class="supply-table__price">786&nbsp;000&nbsp;руб.</td>
-          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        <tr class="table__row">
+          <td class="table__cell table__cell--name">2.0&nbsp;MT Trend Sport 150 л.с. МКПП</td>
+          <td class="table__cell table__cell--year">2012</td>
+          <td class="table__cell table__cell--color"></td>
+          <td class="table__cell table__cell--status">Ожидается</td>
+          <td class="table__cell table__cell--price">786&nbsp;000&nbsp;руб.</td>
+          <td class="table__cell table__cell--query"><a class="table__button" href="#">Запрос</a></td>
         </tr>
 
-        <tr>
-          <td class="supply-table__name">2.0 PowerShift Trend Sport 150 л.с. АКПП<span class="supply-table__extra">+ доп. опция &laquo;Радио-навигационная система Amundasen 2DIN, CD, MP3&raquo;</span></td>
-          <td class="supply-table__year">2013</td>
-          <td class="supply-table__color"></td>
-          <td class="supply-table__status">Нет в&nbsp;наличии</td>
-          <td class="supply-table__price">821&nbsp;000&nbsp;руб.</td>
-          <td class="supply-table__query"><a class="supply-table__button" href="#">Запрос</a></td>
+        <tr class="table__row">
+          <td class="table__cell table__cell--name">2.0 PowerShift Trend Sport 150 л.с. АКПП<span class="table__extra">+ доп. опция &laquo;Радио-навигационная система Amundasen 2DIN, CD, MP3&raquo;</span></td>
+          <td class="table__cell table__cell--year">2013</td>
+          <td class="table__cell table__cell--color"></td>
+          <td class="table__cell table__cell--status">Нет в&nbsp;наличии</td>
+          <td class="table__cell table__cell--price">821&nbsp;000&nbsp;руб.</td>
+          <td class="table__cell table__cell--query"><a class="table__button" href="#">Запрос</a></td>
         </tr>
       </table>
     </section>
 
-    <footer class="main-footer main-footer">
+    <footer class="main-footer">
       <div class="container">
         <section class="copyright">
           <p class="copyright__text">© 2015 Captain Quack</p>
